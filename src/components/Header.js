@@ -1,5 +1,8 @@
-function Header({ currentPage, handlePageChange }) {
-    return (
+import NavBar from "./NavBar/NavBar";
+import { Navbar, Text, Grid, Col } from '@nextui-org/react';
+
+function Header ({ currentPage, handlePageChange }) {
+    return(
         <header>
             <Navbar isBordered variant='static' height={125}>
                 <Grid.Container wrap="wrap">
@@ -7,7 +10,7 @@ function Header({ currentPage, handlePageChange }) {
                         <Navbar.Brand>
                             <Col>
                                 <Text b h1 size={30} >
-                                    Tristan Saragosa
+                                    James Xalis
                                 </Text>
                                 <Text>
                                     Full Stack Web Developer
@@ -17,7 +20,7 @@ function Header({ currentPage, handlePageChange }) {
                     </Grid>
                     <Grid >
                         <Navbar.Content enableCursorHighlight activeColor='primary' hideIn="xsMax" variant='highlight-solid-rounded' >
-                            <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+                        <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
                         </Navbar.Content>
                     </Grid>
                 </Grid.Container>
@@ -26,4 +29,4 @@ function Header({ currentPage, handlePageChange }) {
     );
 }
 
-export default Header ();
+export default Header;
