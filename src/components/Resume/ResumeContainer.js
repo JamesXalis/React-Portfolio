@@ -1,16 +1,13 @@
 
 function ResumeContainer() {
 
-    const handleClick = () => {
-
-    }
 
     return (
         <>
             <div>
                 <aside>
-                    <button onClick={handleClick}>
-                    Download My Resume
+                    <button>
+                        {/* <a target="_blank" rel='norefferer' href={pdf}>Download My Resume</a> */}
                     </button>
                 </aside>
                 <h3>Front-End Proficiencies</h3>

@@ -18,7 +18,6 @@ function App() {
                 return <Projects />;
             case 'Contact Me':
                 document.title = currentPage;
-                return <ContactMe />;
             case 'Resume':
                 document.title = currentPage;
                 return <Resume />;
@@ -38,10 +37,8 @@ function App() {
             <Footer />
         </>
     );
-}
 
-
-return (
+    return (
     <div className="App">
         <header className="App-header">
             <p>
@@ -59,5 +56,5 @@ return (
     </div>
 );
 
-
+    };
 export default App;
