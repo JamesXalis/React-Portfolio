@@ -25,7 +25,7 @@ function SideProjects () {
                             </Text>
                         </Card.Body>
                         <Card.Image
-                            src={quiz}
+
                             objectFit='cover'
                             alt='Quiz App Homepage'
                             width="100%"
@@ -77,7 +77,7 @@ function SideProjects () {
                             </Text>
                         </Card.Body>
                         <Card.Image
-                            src={weather}
+                            
                             objectFit='cover'
                             alt='Weather App Homepage'
                             width="100%"
@@ -128,7 +128,7 @@ function SideProjects () {
                             </Text>
                         </Card.Body>
                         <Card.Image
-                            src={cliLogo}
+                            
                             objectFit='cover'
                             alt='Command Line Interface Logo'
                             width="100%"

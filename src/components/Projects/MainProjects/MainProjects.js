@@ -1,7 +1,5 @@
 import { Card, Grid, Text, Row, Col, Link, Button, Spacer } from '@nextui-org/react';
-import cardBattle from '../../../images/Card-Battle.png'
-import nonsocial from '../../../images/nonsocial.png'
-import loading from '../../../images/loading.png';
+// import cardBattle from '../../../images/Card-Battle.png'
 
 function MainProjects () {
     return (
@@ -80,7 +78,7 @@ function MainProjects () {
                             </Text>
                         </Card.Body>
                         <Card.Image
-                            src={cardBattle}
+                            
                             objectFit='cover'
                             alt='Card Game Project'
                             width="100%"

@@ -1,4 +1,4 @@
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./Navbar/NavBar";
 import { Navbar, Text, Grid, Col } from '@nextui-org/react';
 
 function Header ({ currentPage, handlePageChange }) {
