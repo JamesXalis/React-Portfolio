@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -7,6 +9,8 @@ import Footer from './components/Footer';
 
 function App() {
     const [currentPage, setCurrentPage] = useState('About Me');
+    const lightTheme = createTheme({ type: 'light' });
+    const darkTheme = createTheme({ type: 'dark' });
 
     const renderPage = () => {
         switch (currentPage) {
@@ -16,8 +20,6 @@ function App() {
             case 'Projects':
                 document.title = currentPage;
                 return <Projects />;
-            case 'Contact Me':
-                document.title = currentPage;
             case 'Resume':
                 document.title = currentPage;
                 return <Resume />;
@@ -29,32 +31,23 @@ function App() {
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
-        <>
-            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-            <main>
-                {renderPage()}
-            </main>
-            <Footer />
-        </>
+        <NextThemesProvider
+            defaultTheme="system"
+            attribute="class"
+            value={{
+                light: lightTheme.className,
+                dark: darkTheme.className
+            }}
+        >
+            <NextUIProvider>
+                <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+                <main>
+                    {renderPage()}
+                </main>
+                <Footer />
+            </NextUIProvider>
+        </NextThemesProvider>
     );
+}
 
-    return (
-    <div className="App">
-        <header className="App-header">
-            <p>
-                Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
-        </header>
-    </div>
-);
-
-    };
 export default App;
