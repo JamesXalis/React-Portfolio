@@ -4,7 +4,7 @@ import './index.scss'
 // import logoSubtitle from '../../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
 const Sidebar = () => (
@@ -28,6 +28,16 @@ const Sidebar = () => (
             <li>
                 <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/jamesxalis/'>
                     <FontAwesomeIcon icon={faLinkedin} color='#a4d4d4e' />
+                </a>
+            </li>
+            <li>
+                <a target='_blank' rel='noreferrer' href='https://github.com/JamesXalis'>
+                    <FontAwesomeIcon icon={faGithub} color='#a4d4d4e' />
+                </a>
+            </li>
+            <li>
+                <a target='_blank' rel='noreferrer' href='https://www.youtube.com/@jamesxalis'>
+                    <FontAwesomeIcon icon={faYoutube} color='#a4d4d4e' />
                 </a>
             </li>
         </ul>
