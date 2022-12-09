@@ -14,7 +14,7 @@ const Logo = () => {
         gsap.regitsterPlugin(DrawSVGPlugin)
 
         gsap.timeline()
-        to(bgRef.current, {
+        .to(bgRef.current, {
             duration: 1,
             opacity: 1,
         })
