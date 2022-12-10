@@ -1,4 +1,4 @@
-import 'index.scss'
+import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect, useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,7 +12,7 @@ const About =() =>{
     const [letterClass, setLetterClass]= useState('text-animate')
 
     useEffect(()=>{
-        return setTimeout(() =>{
+        setTimeout(() =>{
             setLetterClass('text-animate-hover')
         },3000)
     },[])
