@@ -11,11 +11,13 @@ const About =() =>{
 
     const [letterClass, setLetterClass]= useState('text-animate')
 
-    useEffect(()=>{
-        setTimeout(() =>{
+    useEffect(() => {
+        const timer = setTimeout(() => {
             setLetterClass('text-animate-hover')
-        },3000)
-    },[])
+        }, 3000)
+
+        return () => clearTimeout(timer)
+    }, [])
 
     return(
         <> 
